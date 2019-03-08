@@ -119,8 +119,12 @@ Because I chose a calendar format and the events are shown by week, I decided to
        {
             week-number : {
                             event-id: { event details},
-                            event-id: { event details}
-                            event-id: { event details}
+                            event-id: { event details},
+                            ...
+                          }
+            week-number : {
+                            event-id: { event details},
+                            event-id: { event details},
                             ...
                           }
             ...
