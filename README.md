@@ -5,7 +5,7 @@
 # TimeTable - Schedule Your Projects the Right Way
 ### airtable_timeline_exercise by _Rainier F. Go_
 
-TimeTable allows its users to keep track of events whether it's a client project :chart_with_upwards_trend:, a writing deadline :card_index:, or anything else that needs to be scheduled :calendar:. It's designed to make sure that the user always knows what's going on. :raised_hands: :pray: :ok_hand:
+TimeTable allows its users to keep track of events whether it's a client project :chart_with_upwards_trend:, a writing deadline :card_index:, or anything else that needs to be scheduled :calendar:. TimeTable is designed to make sure that the user always knows what's going on. :raised_hands: :pray: :ok_hand:
 
 You can run the program by going to the root directory and executing the following:
 
