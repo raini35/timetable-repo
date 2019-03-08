@@ -84,22 +84,25 @@ The `./src` repo is structured as follows:
    - Imagined the use cases for the application and thought about the potential users  
    - Figured out the different data models I needed to get to the solution
    - Figured out the different views I needed for the design of the app
-   - Adjust my learnings from previous step when needed
+   
 2. **[~3 hours] Designing UI/UX of app**
    - Looked at over 100 designs for [design inspiration](/design-inspiration/) (folder contains the top 5 designs I found) on Dribbble, Instagram, Pinterest, etc. 
    - Drew out wireframes and experimented with different layouts 
    - Transferred drawings to images using Photoshop
    - Adjust my learnings from previous step when needed
+   
 3. **[~7 hours] Coding**
    - Created initial file structure for program
    - Worked on Calendar Component (majority of time was spent on here)
    - Worked on FeatureBar Component
    - Reformatted the code to make it more legible (re-write comments, move code into compartments when necessary, etc.) 
    - Bang my head on my keyboard because I couldn't figure out why the background of scrollbar wasn't transparent
+   
 4. **[~3 hours] Creating README**
    - Looked over my notes to see what needed to be said
    - Wrote first draft
    - Thought of ways to jazz it up :100: :gift_heart: :tada: 
+   
 5. **[Timeless] FINISHED**
  
 **Total Time: ~15 hours**
@@ -135,7 +138,7 @@ Because I chose a calendar format and the events are shown by week, I decided to
 
 The above schema gave me easy access to the relevent events by year and then by week. This allowed me to simply get the start week and end week of a given month, pass through the object and store all the events for each week into an array then process the array in React. 
 
-Note: I used a package called `date-fns` in order to get the start week and end week of any date or month 
+Note: I used a package called [`date-fns`](https://date-fns.org/) in order to get the start week and end week of any date or month 
 
 <a name="css-grid-element-placement"></a>
 ## CSS Grid Element Placement
@@ -150,7 +153,7 @@ For example, for the grid above, the orange div has the following css rule:
 
     grid-area: 1 / 2 / 3 / 5
  
-Basically the intuition is that when accessing an array of arrays you use the following arr[0][1]. The first number, 0, represents the row that the event will be in and the second number, 2, represents the first space that the element fills up. For this Calendar problem though, there is a third number that represents the end the last space that element fills up. 
+Basically the intuition is that when accessing an array of arrays you use the following `arr[0][1]`. The first number, `0`, represents the row that the event will be in and the second number, `1`, represents the first space that the element fills up. For this Calendar problem though, there is a third number that represents the last space that element fills up. 
 
 Just to help visualize, say there's an empty week and you wanted to place an event called 'E8' into the week that starts on Wednesday (index 2) and ends on Friday (index 5). This is how the array would transform 
 
@@ -168,7 +171,7 @@ Let's say you add an event called 'E9' into the week that starts on Friday (inde
 [0, 0,  0,  0,  0, 0, 0]        [0, 0,  0,  0,  0,  0,  0]
 ```
 
-Because index 5 and index 6 is free in row 1, when an event that starts on Saturday (index 5) and ends on Sunday (index 6) is processed, the event will be places there.
+Because index 5 and index 6 is free in row 1, when an event that starts on Saturday (index 5) and ends on Sunday (index 6) is processed, the event will be placed there.
 
 ```
 [0, 0, E8, E8, E8,  0,  0]        [0, 0, E8, E8, E8, E10, E10]
@@ -176,9 +179,9 @@ Because index 5 and index 6 is free in row 1, when an event that starts on Satur
 [0, 0,  0,  0,  0,  0,  0]        [0, 0,  0,  0,  0,   0,   0]
 ```
 
-Given how the placement of events is just a matter of filling up an array of arrays and keeping track of the free spaces using a variable, you can see how the grid-area feature of CSS grid would be helpful. 
+Given how the placement of events is just a matter of filling up an array of arrays and keeping track of the free spaces (which you can do by storing a variable of the last element placed), you can see how the grid-area feature of CSS grid would be helpful. 
 
-For the solution, I put grid-area as an inline style so that I could adjust its inputs dynamically in React. 
+For the solution, I put `grid-area` as an inline style so that I could adjust its inputs dynamically in React. 
 
 <a name="stable-sort-by-start-date-and-duration"></a>
 ## Stable Sort by Start Date & Duration 
@@ -186,13 +189,29 @@ Keeping in mind that the placement of events is basically just filling up an arr
 
 When I was drawing out calendars based on different events, I found that there were three types of events when you placed it in a week: `(1)` an event that starts and ends on the same week, `(2)` an event that starts in a week, but ends on a different week, and `(3)` an event that ends in a week, but starts on a previous week. 
 
-I found that the order of events that reduces the amount of whitespace and also makes the calendar week aesthetically pleasing was first to sort the event by the start date and then by the duration. 
+I found that the order of events that reduces the amount of whitespace and also makes the calendar week aesthetically pleasing was first to sort the event by the start date and then by the duration. I did this by passing the function below in Javascript's built-in `sort()`.
 
-Using this patthern allowed the calendar event to have a heavy top row and then the rows become more sparse as you go down. 
+```
+./src/_helpers/event_timeline.js 
+
+    function compareDateAndDuration(a, b){
+      let aArray = a.start.split('-');
+      let bArray = b.start.split('-');
+      let dateA=new Date(aArray[1] + "/" + aArray[2] + "/" + aArray[0]);
+      let dateB=new Date(bArray[1] + "/" + bArray[2] + "/" + bArray[0]);
+
+      return dateA - dateB || b.duration - a.duration//sort by date ascending
+    }
+```
+
+`dateA - dateB` conidtion makes sure that the events are first sorted by the events start date in ascending order. However, if the two days being compared start on the same day, which means that `dateA - dateB` equals 0 then `b.duration - a.duration` makes sure that the event that has a longer duration will be put first. 
+
+By prioritizing the events with earlier start dates and then longer durations, it allowed the calendar weeks to have a heavy top row and then the rows below to become more sparse. 
 
 <a name="things-i-still-need-to-do"></a>
 # :construction: Things I still need to do: 
 Below are the things that I came up with and planned on doing, but because I was way past the expected time, I went ahead and just skipped over. 
+
 - [ ] Add a modal component that pops up on the Calendar component to show more information when a specific event or week is clicked
 - [ ] Add a modal component that pops up on the FeatureBar component to show more information when a specific event is clicked
 - [ ] Add state to the MiniCalendar so that user can choose a range of days or weeks to show all the events in the range on the FeatureBar component
