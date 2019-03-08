@@ -86,7 +86,7 @@ The `./src` repo is structured as follows:
    - Figured out the different views I needed for the design of the app
    - Adjust my learnings from previous step when needed
 2. **[~3 hours] Designing UI/UX of app**
-   - Looked at over 100 designs for [design inspiration](/design-inspiration/) on Dribbble, Instagram, Pinterest, etc. 
+   - Looked at over 100 designs for [design inspiration](/design-inspiration/) (folder contains the top 5 designs I found) on Dribbble, Instagram, Pinterest, etc. 
    - Drew out wireframes and experimented with different layouts 
    - Transferred drawings to images using Photoshop
    - Adjust my learnings from previous step when needed
