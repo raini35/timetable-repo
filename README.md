@@ -9,7 +9,7 @@ TimeTable allows its users to keep track of events whether it's a client project
 
 You can run the program by going to the root directory and executing the following:
 
-    npm run install && npm run start
+    npm install && npm run start
     
 <img src="/wireframes/HomePage.png" >
 
