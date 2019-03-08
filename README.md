@@ -5,7 +5,7 @@
 # TimeTable - Schedule Your Projects the Right Way
 ### airtable_timeline_exercise by _Rainier F. Go_
 
-TimeTable allows its users to keep track of events whether that it's a client project :chart_with_upwards_trend:, a writing deadline :card_index:, or anything else that needs to be scheduled :calendar:. It's designed to make sure that the user always knows what's going on. :raised_hands: :pray: :ok_hand:
+TimeTable allows its users to keep track of events whether it's a client project :chart_with_upwards_trend:, a writing deadline :card_index:, or anything else that needs to be scheduled :calendar:. It's designed to make sure that the user always knows what's going on. :raised_hands: :pray: :ok_hand:
 
 You can run the program by going to the root directory and executing the following:
 
@@ -82,7 +82,7 @@ The `./src` repo is structured as follows:
 1. **[~2 hours] Thinking about the inputs & outputs of the problem**
    - Tried to understand the problem and think of solutions
    - Imagined the use cases for the application and thought about the potential users  
-   - Figured out the different data models and I needed to get to the solution
+   - Figured out the different data models I needed to get to the solution
    - Figured out the different views I needed for the design of the app
    - Adjust my learnings from previous step when needed
 2. **[~3 hours] Designing UI/UX of app**
@@ -106,13 +106,13 @@ The `./src` repo is structured as follows:
 
 <a name="logic-behind-solution"></a>
 # 🧠 Logic Behind Solution: 
-The crux of the coding challenge was to present a list of events in a way space-efficient way. I chose to do a monthly calendar format.I was able to do this because of three things: reformatting the data, css grid's feature to place events by coordinates, and stable sort that sorts first by start date and then duration.
+The crux of the coding challenge was to present a list of events in a space-efficient way. I chose to do a monthly calendar format. I was able to do this because of three things: reformatting the data, css grid's feature to place events by coordinates, and stable sort that sorts first by start date and then duration.
 
 <a name="reformatting-data"></a>
 ## Reformatting Data
-⋅⋅⋅With the inital data being an array of objects, the first thing I did was to figure out what kind of data structure would allow me to access the events in an efficient way. 
+With the inital data being an array of objects, the first thing I did was to figure out what kind of data structure would allow me to access the events in an efficient way. 
 
-⋅⋅⋅Because I chose a calendar format and the events are shown by week, I decided to reformat the array of objects into one huge object with the following schema: 
+Because I chose a calendar format and the events are shown by week, I decided to reformat the array of objects into one huge object with the following schema: 
 ```
 {
     year : 
@@ -129,7 +129,7 @@ The crux of the coding challenge was to present a list of events in a way space-
 }
 ```
 
-This gave me easy access to the relevent events by year and then by week. This allowed me to simply get the start week and end week of a given month, pass through the object and store all the events for each week into an array then process the array in React. 
+The above schema gave me easy access to the relevent events by year and then by week. This allowed me to simply get the start week and end week of a given month, pass through the object and store all the events for each week into an array then process the array in React. 
 
 Note: I used a package called `date-fns` in order to get the start week and end week of any date or month 
 
@@ -201,7 +201,7 @@ Below are the things that I came up with and planned on doing, but because I was
 
 <a name="notes-and-improvements"></a>
 # :pencil: Notes & Improvements:
-* I spent way too much time on designing and programming the front end. It didn't leave enough time to iron out the logic code implementation. 
+* I spent way too much time on designing and programming the front end. I didn't leave enough time to iron out the logic code implementation. 
 
 * I could've spent a bit more time thinking of different data models and functions. Midway through I realized how I structured the data was good for just adding events initially, but for other functions like adding an event after mounting, editing an event and deleting an even, it was way too inefficient. 
 
