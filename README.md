@@ -203,10 +203,10 @@ Below are the things that I came up with and planned on doing, but because I was
 # :pencil: Notes & Improvements:
 * I spent way too much time on designing and programming the front end. I didn't leave enough time to iron out the logic code implementation. 
 
-* I could've spent a bit more time thinking of different data models and functions. Midway through I realized how I structured the data was good for just adding events initially, but for other functions like adding an event after mounting, editing an event and deleting an even, it was way too inefficient. 
+* I could've spent a bit more time thinking of different data models and functions. Midway through I realized how I structured the data was good for just adding events initially, but for other functions like adding an event after mounting, editing an event and deleting an event, it was way too inefficient. 
 
 * I spent too much time on the Calendar Component and I never got to implement the UI/UX for adding, editing and deleting logic. 
 
-* On my initial draft, there were only two to three levels to pass data and I thought I could do it without using some sort of state management, but I was dead wrong. At the end, I was passing variable and functions four to five levels deep. 
+* On my initial draft, there were only two to three levels to pass data and I thought I could do it without using some sort of state management, but I was dead wrong. At the end, I was passing variables and functions four to five levels deep. 
 
 * I'm not very happy with how the logic functions turned out. It got super messy towards the end and if I had more time I woud make it a bit cleaner than what it currently is. If I had more time, I would try to simplify it a bit more. 
