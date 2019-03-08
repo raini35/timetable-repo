@@ -191,9 +191,9 @@ Using this patthern allowed the calendar event to have a heavy top row and then 
 Below are the things that I came up with and planned on doing, but because I was way past the expected time, I went ahead and just skipped over. 
 - [ ] Add a modal component that pops up on the Calendar component to show more information when a specific event or week is clicked
 - [ ] Add a modal component that pops up on the FeatureBar component to show more information when a specific event is clicked
-- [ ] Add state to the MiniCalendar so that user can choose a range of days or weeks to show the all the events for the range on the FeatureBar component
+- [ ] Add state to the MiniCalendar so that user can choose a range of days or weeks to show all the events in the range on the FeatureBar component
 - [ ] Enable users to choose the colors for the event bars 
-- [ ] When an event or week is clicked highlight the event or week on the calendar and make the rest dimmer to show what is selected
+- [ ] When an event or week is clicked, highlight the event or week on the calendar and make the rest dimmer to show what is selected
 - [ ] Add tests to the front end components to make sure everything is rendering
 - [ ] Add tests to the logic functions to make sure I'm handling all cases 
 - [ ] Add the code for new event form below: 
