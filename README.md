@@ -21,7 +21,7 @@ You can run the program by going to the root directory and executing the followi
    
    * [🧠 Logic Behind Solution:](#logic-behind-solution)
    
-      * [Reformatting Data](#reformatting-data-into-an-object-of-objects)
+      * [Reformatting Data Into An Object of Objects](#reformatting-data-into-an-object-of-objects)
       
       * [CSS Grid Element Placement - `grid-area`](#css-grid-element-placement)
       
