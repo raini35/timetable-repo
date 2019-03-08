@@ -1,0 +1,44 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Barlow',sans-serif;
+  font-size: 12px;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  overflow: hidden;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.feature-bar:hover::-webkit-scrollbar-thumb { 
+  background: rgb(226, 226, 226);
+}
+
+.calendar-container:hover::-webkit-scrollbar-thumb { 
+  background: rgb(226, 226, 226);
+}

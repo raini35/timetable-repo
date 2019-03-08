@@ -1,0 +1,9 @@
+.date-number {
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 6px;
+}
+
+.not-in-month {
+  color: rgb(184, 182, 182);
+}

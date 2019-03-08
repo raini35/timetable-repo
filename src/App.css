@@ -1,0 +1,35 @@
+.timetable-app {
+  width: 100vw;
+  min-width: 950px;
+  height: 100vh;
+  display: inline-grid;
+  grid-template-columns: 28% 72%;
+  grid-template-rows: 1fr;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.height-90 {
+  height: 90%;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.border-bottom-none {
+  border-bottom: none;
+}

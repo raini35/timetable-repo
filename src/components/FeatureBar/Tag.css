@@ -1,0 +1,55 @@
+.tag {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid rgb(228, 228, 228);
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 15px;
+}
+
+.tag:hover {
+  box-shadow: 0 0 5px rgba(155, 155, 155, 0.6);
+  -moz-box-shadow: 0 0 5px rgba(155, 155, 155, 0.6);
+  -webkit-box-shadow: 0 0 5px rgba(155, 155, 155, 0.6);
+}
+
+.tag:active {
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0 0 10px rgba(80, 80, 80, 0.6);
+  -moz-box-shadow: 0 0 10px rgba(80, 80, 80, 0.6);
+  -webkit-box-shadow: 0 0 10px rgba(80, 80, 80, 0.6);
+}
+
+.tag-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.tag-edit {
+  font-size: 1rem;
+  color: gray;
+  cursor: pointer;
+}
+
+.tag-edit:hover {
+  color: rgb(54, 54, 54);
+}
+
+.tag-edit:hover {
+  color: black;
+}
+
+.tag-duration {
+  font-size: 1.2rem;;
+  font-style: italic;
+}
+
+.tag-notes-container {
+  font-size: 1.3rem;
+}
+
+.no-tags {
+  font-size: 1.3rem;
+}

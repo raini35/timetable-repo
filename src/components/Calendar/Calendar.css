@@ -1,0 +1,46 @@
+.calendar-container {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  overflow-y: auto;
+  justify-self: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-left: 1px solid rgb(228, 228, 228);
+}
+
+.calendar-week {
+  width: 100%;
+  border-bottom: 1px solid rgb(215, 215, 215);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.calendar-week-days {
+  margin-top: 10px; 
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.calendar-days-and-events {
+  background-color: white;
+  border: 1px solid rgb(228, 228, 228); 
+  border-radius: 10px; 
+  padding-top: 10px; 
+  padding-bottom: 25px; 
+  padding-right: 20px; 
+  padding-left: 20px;
+  margin-bottom: 20px; 
+}
+
+.weekday-header {
+  color: rgb(182, 182, 184);
+  font-weight: 700;
+  margin-bottom: 10px;
+  height: 100%;
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+}
+

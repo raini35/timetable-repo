@@ -1,0 +1,25 @@
+.event {
+  border-radius: 8px;
+  background-color: rgb(2, 157, 253);
+  font-size: .95rem;
+  font-weight: 700;
+  padding: 3px;
+  color: white;
+  margin: 3px 1.5px 0px 1.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  justify-items: center;
+}
+
+.border-right-radius-none{
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.border-left-radius-none{
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
