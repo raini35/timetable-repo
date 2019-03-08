@@ -156,7 +156,7 @@ Just to help visualize, say there's an empty week and you wanted to place an eve
 [0, 0, 0, 0, 0, 0, 0]        [0, 0,  0,  0,  0, 0, 0]
 ```
 
-Let's say you add an event called 'E9' into the week that starts on Friday (index 4) and ends on Sunday (index 6). When you check the first row you find that E8 is already placed on index 5 so what you do is go to the next row and see if index 5 is free. Since it is, you go ahead and place E9 from its start on index 4 to its end on index 6. 
+Let's say you add an event called 'E9' into the week that starts on Friday (index 4) and ends on Sunday (index 6). When you check the first row you find that E8 is already placed on index 4 so what you do is go to the next row and see if index 4 is free. Since it is free, you go ahead and place E9 from its start on index 4 to its end on index 6. 
 
 ```
 [0, 0, E8, E8, E8, 0, 0]        [0, 0, E8, E8, E8,  0,  0]
@@ -164,7 +164,7 @@ Let's say you add an event called 'E9' into the week that starts on Friday (inde
 [0, 0,  0,  0,  0, 0, 0]        [0, 0,  0,  0,  0,  0,  0]
 ```
 
-Because index 5 and index 6 is free when an event that goes from Saturday and Sunday is processed, it fill up that free space. 
+Because index 5 and index 6 is free in row 1, when an event that starts on Saturday (index 5) and ends on Sunday (index 6) is processed, the event will be places there.
 
 ```
 [0, 0, E8, E8, E8,  0,  0]        [0, 0, E8, E8, E8, E10, E10]
@@ -172,9 +172,9 @@ Because index 5 and index 6 is free when an event that goes from Saturday and Su
 [0, 0,  0,  0,  0,  0,  0]        [0, 0,  0,  0,  0,   0,   0]
 ```
 
-Given how the placement of events is just a matter of filling up an array of arrays and keeping track of the free space using a variable, you can see how the grid-area feature of CSS grid would be helpful. 
+Given how the placement of events is just a matter of filling up an array of arrays and keeping track of the free spaces using a variable, you can see how the grid-area feature of CSS grid would be helpful. 
 
-For the solution, I went ahead and used put grid-area as an inline style so that I could asjust its inputs dynamically in react. 
+For the solution, I put grid-area as an inline style so that I could adjust its inputs dynamically in React. 
 
 <a name="stable-sort-by-start-date-and-duration"></a>
 ## Stable Sort by Start Date & Duration 
@@ -184,7 +184,7 @@ When I was drawing out calendars based on different events, I found that there w
 
 I found that the order of events that reduces the amount of whitespace and also makes the calendar week aesthetically pleasing was first to sort the event by the start date and then by the duration. 
 
-Using this patthern allowed the calendar event to have a heavy top row and then the rows become more sparse as you go down. In other orders, it was more sporadic. 
+Using this patthern allowed the calendar event to have a heavy top row and then the rows become more sparse as you go down. 
 
 <a name="things-i-still-need-to-do"></a>
 # :construction: Things I still need to do: 
