@@ -153,12 +153,7 @@ function goThroughRelevantWeekAnd(functionToCall, event, start, stop, year, cont
   return;
 }
 
-function goThroughEventsAnd(action, event, container, originalEvent = null) {
-  if(event.id === 555) {
-    console.log("INSIDE FUNCTION")
-    console.log(event)
-  }
-  
+function goThroughEventsAnd(action, event, container, originalEvent = null) {  
   let { 
         startDate, 
         endDate, 
@@ -180,7 +175,7 @@ function goThroughEventsAnd(action, event, container, originalEvent = null) {
 
     // End at week 52 or 53 or the last week if the year is not the end year
     let currentEnd = year === endYear ? endWeek : getWeek(lastDayOfYear);
-    console.log(year);
+    
     switch(action) {
       case 'add_event':
         goThroughRelevantWeekAnd(addEvent, event, currentStart, currentEnd, year, container);
