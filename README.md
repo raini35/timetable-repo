@@ -21,13 +21,13 @@ You can run the program by going to the root directory and executing the followi
    
    * [🧠 Logic Behind Solution:](#logic-behind-solution)
    
-      * [Reformatting Data](#reformatting-data)
+      * [Reformatting Data](#reformatting-data-into-an-object-of-objects)
       
-      * [CSS Grid Element Placement](#css-grid-element-placement)
+      * [CSS Grid Element Placement - `grid-area`](#css-grid-element-placement)
       
       * [Stable Sort by Start Date & Duration ](#stable-sort-by-start-date-and-duration)
       
-   * [:construction: Things I still need to do:](#things-i-still-need-to-do)
+   * [:construction: Things I Still Need to Do:](#things-i-still-need-to-do)
    
    * [:pencil: Notes/Improvements:](#notes-and-improvements)
 <!--te-->
@@ -111,8 +111,8 @@ The `./src` repo is structured as follows:
 # 🧠 Logic Behind Solution: 
 The crux of the coding challenge was to present a list of events in a space-efficient way. I chose to do a monthly calendar format. I was able to do this because of three things: reformatting the data, css grid's feature to place events by coordinates, and stable sort that sorts first by start date and then duration.
 
-<a name="reformatting-data"></a>
-## Reformatting Data
+<a name="reformatting-data-into-an-object-of-objects"></a>
+## Reformatting Data Into An Object of Objects
 With the inital data being an array of objects, the first thing I did was to figure out what kind of data structure would allow me to access the events in an efficient way. 
 
 Because I chose a calendar format and the events are shown by week, I decided to reformat the array of objects into one huge object with the following schema: 
@@ -141,7 +141,7 @@ The above schema gave me easy access to the relevent events by year and then by 
 Note: I used a package called [`date-fns`](https://date-fns.org/) in order to get the start week and end week of any date or month 
 
 <a name="css-grid-element-placement"></a>
-## CSS Grid Element Placement
+## CSS Grid Element Placement - `grid-area`
 <img src="https://css-tricks.com/wp-content/uploads/2018/11/template-columns-rows-01.svg"  width="350">
 When you define a CSS grid, one of the ways you're able to place elements and manipulate your layout is through the x and y coordinates of the grid that's made. An example of this is the image above. You can use the following css rule formula to place your element. 
 
@@ -209,7 +209,7 @@ I found that the order of events that reduces the amount of whitespace and also 
 By prioritizing the events with earlier start dates and then longer durations, it allowed the calendar weeks to have a heavy top row and then the rows below to become more sparse. 
 
 <a name="things-i-still-need-to-do"></a>
-# :construction: Things I still need to do: 
+# :construction: Things I Still Need to Do:
 Below are the things that I came up with and planned on doing, but because I was way past the expected time, I went ahead and just skipped over. 
 
 - [ ] Add a modal component that pops up on the Calendar component to show more information when a specific event or week is clicked
