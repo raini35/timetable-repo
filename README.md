@@ -15,11 +15,11 @@ You can run the program by going to the root directory and executing the followi
 
 # Table of Contents
 <!--ts-->
-   * [:book: Overview:](#overview)
+   * [:book: Overview](#overview)
    
-   * [🗺️ My Process:](#my-process)
+   * [🗺️ My Process](#my-process)
    
-   * [🧠 Logic Behind Solution:](#logic-behind-solution)
+   * [🧠 Logic Behind Solution](#logic-behind-solution)
    
       * [Reformatting Data Into An Object of Objects](#reformatting-data-into-an-object-of-objects)
       
@@ -27,14 +27,14 @@ You can run the program by going to the root directory and executing the followi
       
       * [Stable Sort by Start Date & Duration ](#stable-sort-by-start-date-and-duration)
       
-   * [:construction: Things I Still Need to Do:](#things-i-still-need-to-do)
+   * [:construction: Things I Still Need to Do](#things-i-still-need-to-do)
    
-   * [:pencil: Notes/Improvements:](#notes-and-improvements)
+   * [:pencil: Notes/Improvements](#notes-and-improvements)
 <!--te-->
 
 
 <a name="overview"></a>
-# :book: Overview:
+# :book: Overview
 The application is divided into two components: **FeatureBar** & **Component** 
 
 <img src="/wireframes/FeatureBarAndCalendar.png" >
@@ -78,7 +78,7 @@ The `./src` repo is structured as follows:
 ```
 
 <a name="my-process"></a>
-# 🗺️ My Process: 
+# 🗺️ My Process
 1. **[~2 hours] Thinking about the inputs & outputs of the problem**
    - Tried to understand the problem and think of solutions
    - Imagined the use cases for the application and thought about the potential users  
@@ -108,7 +108,7 @@ The `./src` repo is structured as follows:
 **Total Time: ~15 hours**
 
 <a name="logic-behind-solution"></a>
-# 🧠 Logic Behind Solution: 
+# 🧠 Logic Behind Solution
 The crux of the coding challenge was to present a list of events in a space-efficient way. I chose to do a monthly calendar format. I was able to do this because of three things: reformatting the data, css grid's feature to place events by coordinates, and stable sort that sorts first by start date and then duration.
 
 <a name="reformatting-data-into-an-object-of-objects"></a>
@@ -209,7 +209,7 @@ I found that the order of events that reduces the amount of whitespace and also 
 By prioritizing the events with earlier start dates and then longer durations, it allowed the calendar weeks to have a heavy top row and then the rows below to become more sparse. 
 
 <a name="things-i-still-need-to-do"></a>
-# :construction: Things I Still Need to Do:
+# :construction: Things I Still Need to Do
 Below are the things that I came up with and planned on doing, but because I was way past the expected time, I went ahead and just skipped over. 
 
 - [ ] Add a modal component that pops up on the Calendar component to show more information when a specific event or week is clicked
@@ -223,7 +223,7 @@ Below are the things that I came up with and planned on doing, but because I was
 <img src="/wireframes/AddEvent.png">
 
 <a name="notes-and-improvements"></a>
-# :pencil: Notes & Improvements:
+# :pencil: Notes & Improvements
 * I spent way too much time on designing and programming the front end. I didn't leave enough time to iron out the logic code implementation. 
 
 * I could've spent a bit more time thinking of different data models and functions. Midway through I realized how I structured the data was good for just adding events initially, but for other functions like adding an event after mounting, editing an event and deleting an event, it was way too inefficient. 
