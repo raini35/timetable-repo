@@ -155,7 +155,7 @@ For example, for the grid above, the orange div has the following css rule:
  
 Basically the intuition is that when accessing an array of arrays you use the following `arr[0][1]`. The first number, `0`, represents the row that the event will be in and the second number, `1`, represents the first space that the element fills up. For this Calendar problem though, there is a third number that represents the last space that element fills up. 
 
-Just to help visualize, say there's an empty week and you wanted to place an event called 'E8' into the week that starts on Wednesday (index 2) and ends on Friday (index 5). This is how the array would transform 
+Just to help visualize, say there's an empty week and you wanted to place an event called 'E8' into the week that starts on Wednesday (index 2) and ends on Friday (index 4). This is how the array would transform 
 
 ```
 [0, 0, 0, 0, 0, 0, 0]        [0, 0, E8, E8, E8, 0, 0]
