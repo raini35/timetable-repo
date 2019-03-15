@@ -35,7 +35,7 @@ You can run the program by going to the root directory and executing the followi
 
 <a name="overview"></a>
 # :book: Overview
-The application is divided into two components: **FeatureBar** & **Component** 
+The application is divided into two components: **FeatureBar** & **Calendar** 
 
 <img src="/wireframes/FeatureBarAndCalendar.png" >
 
@@ -89,14 +89,14 @@ The `./src` repo is structured as follows:
    - Looked at over 100 designs for [design inspiration](/design-inspiration/) (folder contains the top 5 designs I found) on Dribbble, Instagram, Pinterest, etc. 
    - Drew out wireframes and experimented with different layouts 
    - Transferred drawings to images using Photoshop
-   - Adjust my learnings from previous step when needed
+   - Adjusted my learnings from previous step when needed
    
 3. **[~7 hours] Coding**
    - Created initial file structure for program
    - Worked on Calendar Component (majority of time was spent on here)
    - Worked on FeatureBar Component
    - Reformatted the code to make it more legible (re-write comments, move code into compartments when necessary, etc.) 
-   - Bang my head on my keyboard because I couldn't figure out why the background of scrollbar wasn't transparent
+   - Banged my head on my keyboard because I couldn't figure out why the background of scrollbar wasn't transparent
    
 4. **[~3 hours] Creating README**
    - Looked over my notes to see what needed to be said
